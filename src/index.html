@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Coffee House</title>
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <header class="border-b border-slate-800">
+    <div class="mx-auto max-w-7xl px-6 py-6 flex items-center justify-between">
+      <div class="text-2xl font-bold tracking-tight">Coffee House</div>
+      <nav class="hidden gap-8 text-slate-300 md:flex">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#menu" class="hover:text-white">Menu</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="order-now-button" class="hidden rounded-full bg-amber-500 px-5 py-2 text-slate-950 font-semibold hover:bg-amber-400 md:inline-flex">
+          Order Now
+        </button>
+        <button id="mobile-menu-button" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-900 text-slate-300 transition hover:bg-slate-800 md:hidden" aria-label="Open menu">
+          <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+          <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-slate-800 bg-slate-950/95 px-6 py-4 md:hidden">
+      <nav class="flex flex-col gap-4 text-slate-300">
+        <a href="#home" class="block rounded-2xl px-4 py-3 hover:bg-slate-900 hover:text-white">Home</a>
+        <a href="#menu" class="block rounded-2xl px-4 py-3 hover:bg-slate-900 hover:text-white">Menu</a>
+        <a href="#about" class="block rounded-2xl px-4 py-3 hover:bg-slate-900 hover:text-white">About</a>
+        <a href="#contact" class="block rounded-2xl px-4 py-3 hover:bg-slate-900 hover:text-white">Contact</a>
+        <button id="mobile-order-button" class="mt-2 rounded-full bg-amber-500 px-5 py-2 text-slate-950 font-semibold hover:bg-amber-400">Order Now</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="relative overflow-hidden">
+      <div class="mx-auto max-w-7xl px-6 py-20 lg:flex lg:items-center lg:justify-between">
+        <div class="max-w-2xl">
+          <p class="mb-4 inline-flex rounded-full bg-amber-500/20 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-amber-300">
+            Fresh roasted
+          </p>
+          <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Warm coffee, cool mornings.
+          </h1>
+          <p class="mt-6 max-w-xl text-slate-300">
+            Discover handcrafted espresso, creamy lattes, and specialty blends made for every moment. Enjoy fast delivery or cozy in-store vibes.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#menu" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 shadow-xl shadow-amber-500/20 transition hover:bg-slate-100">
+              View Menu
+            </a>
+            <a href="#contact" class="rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:bg-slate-800">
+              Book a Table
+            </a>
+          </div>
+        </div>
+        <div class="mt-12 lg:mt-0">
+          <div class="relative mx-auto w-full max-w-xl">
+            <div class="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500 blur-2xl opacity-40"></div>
+            <div class="relative overflow-hidden rounded-[2rem] bg-slate-900/90 p-6 shadow-2xl shadow-black/40">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" alt="Coffee cup" class="h-[420px] w-full rounded-3xl object-cover shadow-xl" />
+              <div class="mt-6 flex items-center justify-between gap-4">
+                <div>
+                  <p class="text-lg font-semibold text-white">Caramel Latte</p>
+                  <p class="mt-1 text-sm text-slate-400">Smooth espresso, steamed milk, and caramel drizzle.</p>
+                </div>
+                <span class="rounded-full bg-amber-500 px-4 py-2 text-sm font-bold text-slate-950">₹249</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="bg-slate-900/80 py-16">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="mb-12 text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-amber-300">Menu highlights</p>
+          <h2 class="mt-4 text-3xl font-bold text-white sm:text-4xl">Sip something special</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-400">
+            Explore our curated coffee collection with bold blends, creamy classics, and signature seasonal drinks.
+          </p>
+        </div>
+        <div class="grid gap-8 md:grid-cols-3">
+          <article class="rounded-3xl border border-slate-800 bg-slate-950 p-7 shadow-xl shadow-black/20">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-500">
+              <span class="text-xl font-bold text-slate-950">01</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Espresso Shot</h3>
+            <p class="mt-3 text-slate-400">Pure, intense, and perfectly extracted — the foundation of every great coffee.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-800 bg-slate-950 p-7 shadow-xl shadow-black/20">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-500">
+              <span class="text-xl font-bold text-slate-950">02</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Vanilla Cappuccino</h3>
+            <p class="mt-3 text-slate-400">Creamy foam, vanilla sweetness, and rich espresso in every cup.</p>
+          </article>
+          <article class="rounded-3xl border border-slate-800 bg-slate-950 p-7 shadow-xl shadow-black/20">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-3xl bg-amber-500">
+              <span class="text-xl font-bold text-slate-950">03</span>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Cold Brew</h3>
+            <p class="mt-3 text-slate-400">Smooth, refreshing, and low-acid — brewed slow for maximum flavor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-16">
+      <div class="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:justify-between">
+        <div class="max-w-xl">
+          <p class="text-sm uppercase tracking-[0.35em] text-amber-300">Who we are</p>
+          <h2 class="mt-4 text-3xl font-bold text-white sm:text-4xl">A cozy coffee experience</h2>
+          <p class="mt-6 text-slate-400">
+            At Coffee House, we roast our beans daily and serve drinks crafted with care. Warm atmosphere, friendly service, and the best coffee in town.
+          </p>
+          <ul class="mt-8 space-y-4 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-slate-950 font-bold">✔</span>
+              Small-batch roasted beans
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-slate-950 font-bold">✔</span>
+              Seasonal drinks and bakery bites
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-amber-500 text-slate-950 font-bold">✔</span>
+              Comfortable seating and free Wi-Fi
+            </li>
+          </ul>
+        </div>
+        <div class="mt-12 lg:mt-0">
+          <div class="rounded-[2rem] bg-gradient-to-br from-slate-800/80 to-slate-900 p-6 shadow-2xl shadow-black/30">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Coffee shop" class="h-96 w-full rounded-[1.75rem] object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="border-t border-slate-800 bg-slate-950/95 py-10">
+    <div class="mx-auto max-w-7xl px-6 text-slate-400">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-xl font-semibold text-white">Coffee House</p>
+          <p class="mt-3 max-w-md">
+            Find us in the city center for great coffee, friendly staff, and relaxing vibes.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <p class="font-semibold text-white">Contact</p>
+          <p>Email: hello@coffeehouse.com</p>
+          <p>Phone: +91 9311579536</p>
+        </div>
+      </div>
+      <p class="mt-10 text-center text-sm text-slate-500">© 2026 Coffee House. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="order-modal" class="fixed inset-0 z-50 hidden items-start sm:items-center justify-center overflow-auto bg-slate-950/75 px-4 py-6 sm:px-6">
+    <div class="w-full max-w-2xl rounded-[2rem] bg-slate-900 p-6 shadow-2xl shadow-black/50 max-h-[90vh] overflow-auto sm:my-8">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Place your order</h2>
+          <p class="mt-2 text-slate-400">Fill out the form and we’ll get your coffee ready.</p>
+        </div>
+        <button id="close-order-modal" class="rounded-full bg-slate-800 p-3 text-slate-300 transition hover:bg-slate-700" aria-label="Close order form">✕</button>
+      </div>
+
+      <div id="order-confirmation" class="hidden mt-6 rounded-3xl border border-emerald-500 bg-emerald-500/10 p-4 text-emerald-100">
+        <p class="font-semibold text-white">Order confirmed!</p>
+        <p class="mt-2 text-sm text-emerald-200">Your order number is <span id="order-number" class="font-bold"></span>.</p>
+      </div>
+
+      <form id="order-form" class="mt-8 space-y-5">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="block text-sm text-slate-300">
+            <span>Name</span>
+            <input id="order-name" name="name" type="text" required placeholder="Your name" class="mt-2 w-full rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-amber-400" />
+          </label>
+          <label class="block text-sm text-slate-300">
+            <span>Phone</span>
+            <input id="order-phone" name="phone" type="tel" required minlength="10" placeholder="+91 12345 67890" class="mt-2 w-full rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-amber-400" />
+          </label>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <label class="block text-sm text-slate-300">
+            <span>Drink</span>
+            <select id="order-drink" name="drink" required class="mt-2 w-full rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-amber-400">
+              <option value="">Select a drink</option>
+              <option>Cappuccino</option>
+              <option>Latte</option>
+              <option>Espresso</option>
+              <option>Cold Brew</option>
+            </select>
+          </label>
+          <label class="block text-sm text-slate-300">
+            <span>Quantity</span>
+            <input id="order-qty" name="quantity" type="number" required min="1" value="1" class="mt-2 w-full rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-amber-400" />
+          </label>
+        </div>
+
+        <label class="block text-sm text-slate-300">
+          <span>Notes</span>
+          <textarea id="order-notes" name="notes" rows="4" placeholder="Extra shot, sugar-free, etc." class="mt-2 w-full rounded-3xl border border-slate-700 bg-slate-950 px-4 py-3 text-white outline-none transition focus:border-amber-400"></textarea>
+        </label>
+
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <button type="submit" class="w-full rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-amber-400 sm:w-auto">Send Order</button>
+          <button type="button" id="cancel-order-button" class="w-full rounded-full border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-slate-300 transition hover:border-amber-400 hover:text-white sm:w-auto">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const orderNowButton = document.getElementById('order-now-button');
+    const mobileOrderButton = document.getElementById('mobile-order-button');
+    const orderModal = document.getElementById('order-modal');
+    const closeOrderModal = document.getElementById('close-order-modal');
+    const cancelOrderButton = document.getElementById('cancel-order-button');
+    const orderConfirmation = document.getElementById('order-confirmation');
+    const orderNumberLabel = document.getElementById('order-number');
+    const orderForm = document.querySelector('#order-modal form');
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle('hidden');
+    };
+
+    const openOrderModal = () => {
+      // ensure page top is visible on mobile, then show modal
+      orderConfirmation.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        orderModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        mobileMenu.classList.add('hidden');
+        orderModal.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('order-name')?.focus();
+      }, 300);
+    };
+
+    const closeOrderModalFn = () => {
+      orderModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      // reset form and hide confirmation when modal closes
+      orderForm?.reset();
+      orderConfirmation?.classList.add('hidden');
+      const submitBtn = document.querySelector('#order-form button[type="submit"]');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Order'; }
+      if (orderNumberLabel) orderNumberLabel.textContent = '';
+    };
+
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+    mobileMenuButton?.addEventListener('click', toggleMenu);
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    orderNowButton?.addEventListener('click', openOrderModal);
+    mobileOrderButton?.addEventListener('click', openOrderModal);
+    closeOrderModal?.addEventListener('click', closeOrderModalFn);
+    cancelOrderButton?.addEventListener('click', closeOrderModalFn);
+
+    orderForm?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // enforce validation before confirming
+      if (!orderForm.checkValidity()) {
+        orderForm.reportValidity();
+        return;
+      }
+      const orderNumber = Math.floor(100000 + Math.random() * 900000);
+      orderNumberLabel.textContent = orderNumber;
+      orderConfirmation.classList.remove('hidden');
+      // keep the form visible; mark the submit button as sent and disable it
+      const submitBtn = document.querySelector('#order-form button[type="submit"]');
+      if (submitBtn) { submitBtn.textContent = 'Sent'; submitBtn.disabled = true; }
+      // make confirmation visible on small screens
+      orderConfirmation.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    orderModal?.addEventListener('click', (event) => {
+      if (event.target === orderModal) closeOrderModalFn();
+    });
+  </script>
+</body>
+</html>
